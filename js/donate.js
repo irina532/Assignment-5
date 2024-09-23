@@ -7,6 +7,8 @@ document.getElementById('noakhali-donate-btn').addEventListener('click', functio
     const inputDonationNoakhali = getInput('input-noakhali');
     if (isNaN(inputDonationNoakhali) || inputDonationNoakhali === '0' || !inputDonationNoakhali) {
         alert('Invalid Donation Amount');
+        const input = document.getElementById('input-noakhali');
+        input.value='';
         return;
 
 
@@ -27,6 +29,8 @@ document.getElementById('noakhali-donate-btn').addEventListener('click', functio
 <h4 class="text-lg lg:text-xl  font-bold">${inputDonationNoakhali} Taka is Donated for Famine-2024 at Noakhlai, Bangladesh</h4>
 <p class="text-black opacity-70 text-sm">${date}</p>`;
         document.getElementById('history').appendChild(div);
+        const inputField =document.getElementById('input-noakhali');
+        inputField.value='';
         my_modal_1.showModal();
 
 
@@ -40,6 +44,8 @@ document.getElementById('feni-donate-btn').addEventListener('click', function (e
     const inputDonationFeni = getInput('input-feni');
     if (isNaN(inputDonationFeni) || inputDonationFeni === '0' || !inputDonationFeni) {
         alert('Invalid Donation Amount');
+        const input =document.getElementById('input-feni');
+        input.value='';
         return;
 
 
@@ -59,6 +65,8 @@ document.getElementById('feni-donate-btn').addEventListener('click', function (e
 <h4 class="text-lg lg:text-xl font-bold">${inputDonationFeni} Taka is Donated for Famine-2024 at Feni, Bangladesh</h4>
 <p class="text-black opacity-70 text-sm">${date}</p>`;
         document.getElementById('history').appendChild(div);
+        const inputField =document.getElementById('input-feni');
+        inputField.value='';
         my_modal_1.showModal();
 
     }
@@ -71,13 +79,13 @@ document.getElementById('quota-donate-btn').addEventListener('click', function (
     const inputDonationQuota = getInput('input-quota');
     if (isNaN(inputDonationQuota) || inputDonationQuota === '0' || !inputDonationQuota) {
         alert('Invalid Donation Amount');
+        const input=document.getElementById('input-quota');
+        input.value='';
         return;
 
 
     }
-    if (!inputDonationQuota) {
-        return;
-    }
+    
     const bdtQuota = getBDT('quota-bdt');
     const bdt = calculateDonation(inputDonationQuota, bdtQuota);
     if (typeof (bdt) === 'number') {
@@ -92,6 +100,8 @@ document.getElementById('quota-donate-btn').addEventListener('click', function (
 <h4 class="text-lg lg:text-xl font-bold">${inputDonationQuota} Taka is Donated for Aid for Quota Movement Injured, Bangladesh</h4>
 <p class="text-black opacity-70 text-sm">${date}</p>`;
         document.getElementById('history').appendChild(div);
+        const inputField = document.getElementById('input-quota');
+        inputField.value='';
 
         my_modal_1.showModal();
     }
@@ -121,6 +131,7 @@ function calculateDonation(inputAmount, bdtAmount) {
 
     if (isNaN(inputAmount) || inputAmount < 0) {
         alert('Invalid Donation Amount');
+
 
     }
     else {
