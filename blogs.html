@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+    <!--daisy ui cdn-->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<!--font awesome cdn-->
+<script src="https://kit.fontawesome.com/cc24d113d5.js" crossorigin="anonymous"></script>
+
+<!--google font cdn-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+<style>
+    .lexend-font{
+  font-family: "Lexend", sans-serif;
+  
+}
+</style>
+</head>
+<body class="lexend-font">
+    <header>
+        <nav class="px-5 lg:px-10 pt-5 pb-24 bg-[#F9F7F3]">
+            <div class="flex flex-col lg:flex-row items-center lg:justify-between">
+                
+                    <button class="bg-[#B4F461] w-24 h-10 rounded-lg text-[#111111] font-semibold lexend-font" >Blog</button>
+                
+                <div class="donate-div flex items-center gap-2">
+                    <img src="images/logo.png" alt="">
+                    <p class="lexend-font font-semibold text-[#111111]">Donate Bangladesh</p>
+
+                </div>
+                <div class="bdt-div flex items-center gap-2">
+                    <img src="images/coin.png" alt="">
+                    <p id="main-amount" class="text-[#111111] opacity-70 font-semibold lexend-font">5500</p>
+                    <p class="text-[#111111] opacity-70 font-semibold lexend-font">BDT</p>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <main>
+        
+        <h1 class=" my-10 mx-10 text-5xl font-bold">Important FAQ <i class="fa-solid fa-question"></i></h1>
+        <div class="mx-5 lg:mx-10 gap-5">
+            <div class="collapse collapse-arrow border rounded-lg">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+                <div class="collapse-content">
+                  <p>hello</p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow border rounded-lg">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+                <div class="collapse-content">
+                  <p>hello</p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow border rounded-lg">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+                <div class="collapse-content">
+                  <p>hello</p>
+                </div>
+              </div>
+
+              <div class="collapse collapse-arrow border rounded-lg">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+                <div class="collapse-content">
+                  <p>hello</p>
+                </div>
+              </div>
+              
+        </div>
+
+    </main>
+    <script src="js/donate.js"></script>
+    <script src="js/blog.js"></script>
+    
+</body>
+</html>
