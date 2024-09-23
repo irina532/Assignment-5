@@ -5,15 +5,13 @@ document.getElementById('noakhali-donate-btn').addEventListener('click', functio
     event.preventDefault;
 
     const inputDonationNoakhali = getInput('input-noakhali');
-    if (isNaN(inputDonationNoakhali) || inputDonationNoakhali==='0') {
+    if (isNaN(inputDonationNoakhali) || inputDonationNoakhali==='0' || !inputDonationNoakhali) {
          alert('Invalid Donation Amount');
          return;
 
         
     }
-    if(!inputDonationNoakhali){
-        return;
-    }
+    
 
     const bdtNoakhali = getBDT('noakhali-bdt');
     const bdt = calculateDonation(inputDonationNoakhali, bdtNoakhali);
@@ -40,15 +38,13 @@ document.getElementById('noakhali-donate-btn').addEventListener('click', functio
 document.getElementById('feni-donate-btn').addEventListener('click', function (event) {
     event.preventDefault;
     const inputDonationFeni = getInput('input-feni');
-    if (isNaN(inputDonationFeni) || inputDonationFeni==='0') {
+    if (isNaN(inputDonationFeni) || inputDonationFeni==='0' || !inputDonationFeni) {
         alert('Invalid Donation Amount');
         return;
         
        
    }
-   if(!inputDonationFeni){
-       return;
-   }
+   
     const bdtFeni = getBDT('feni-bdt');
     const bdt = calculateDonation(inputDonationFeni, bdtFeni);
     if (typeof (bdt) === 'number') {
@@ -73,7 +69,7 @@ document.getElementById('feni-donate-btn').addEventListener('click', function (e
 document.getElementById('quota-donate-btn').addEventListener('click', function (event) {
     event.preventDefault;
     const inputDonationQuota = getInput('input-quota');
-    if (isNaN(inputDonationQuota) || inputDonationQuota==='0') {
+    if (isNaN(inputDonationQuota) || inputDonationQuota==='0' || !inputDonationQuota) {
         alert('Invalid Donation Amount');
         return;
         
