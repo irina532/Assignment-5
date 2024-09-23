@@ -5,8 +5,12 @@ document.getElementById('noakhali-donate-btn').addEventListener('click', functio
     event.preventDefault;
 
     const inputDonationNoakhali = getInput('input-noakhali');
-    if (!inputDonationNoakhali || isNaN(inputDonationNoakhali)) {
-         alert('Invalid Donation Amount')
+    if (isNaN(inputDonationNoakhali)) {
+         alert('Invalid Donation Amount');
+
+        
+    }
+    if(!inputDonationNoakhali){
         return;
     }
 
@@ -16,12 +20,12 @@ document.getElementById('noakhali-donate-btn').addEventListener('click', functio
         document.getElementById('noakhali-bdt').innerText = bdt;
         const inputDonationNoakhali = getInput('input-noakhali');
         const div = document.createElement('div');
-        div.classList.add('border', 'rounded-xl', 'px-5', 'py-5')
+        div.classList.add('border', 'rounded-xl', 'px-5', 'py-5','mx-16')
 
         const date = Date();
 
         div.innerHTML = `
-<h4 class="text-xl font-bold">${inputDonationNoakhali} Taka is Donated for Famine-2024 at Noakhlai</h4>
+<h4 class="text-lg lg:text-xl  font-bold">${inputDonationNoakhali} Taka is Donated for Famine-2024 at Noakhlai, Bangladesh</h4>
 <p class="text-black opacity-70 text-sm">${date}</p>`;
         document.getElementById('history').appendChild(div);
 
@@ -34,21 +38,26 @@ document.getElementById('noakhali-donate-btn').addEventListener('click', functio
 document.getElementById('feni-donate-btn').addEventListener('click', function (event) {
     event.preventDefault;
     const inputDonationFeni = getInput('input-feni');
-    if (!inputDonationFeni || isNaN(inputDonationFeni)) {
-        return;
-    }
+    if (isNaN(inputDonationFeni)) {
+        alert('Invalid Donation Amount');
+        
+       
+   }
+   if(!inputDonationFeni){
+       return;
+   }
     const bdtFeni = getBDT('feni-bdt');
     const bdt = calculateDonation(inputDonationFeni, bdtFeni);
     if (typeof (bdt) === 'number') {
         document.getElementById('feni-bdt').innerText = bdt;
         const inputDonationFeni = getInput('input-feni');
         const div = document.createElement('div');
-        div.classList.add('border', 'rounded-xl', 'px-5', 'py-5')
+        div.classList.add('border', 'rounded-xl', 'px-5', 'py-5', 'mx-16')
 
         const date = Date();
 
         div.innerHTML = `
-<h4 class="text-xl font-bold">${inputDonationFeni} Taka is Donated for Famine-2024 at Feni</h4>
+<h4 class="text-lg lg:text-xl font-bold">${inputDonationFeni} Taka is Donated for Famine-2024 at Feni, Bangladesh</h4>
 <p class="text-black opacity-70 text-sm">${date}</p>`;
         document.getElementById('history').appendChild(div);
 
@@ -60,21 +69,26 @@ document.getElementById('feni-donate-btn').addEventListener('click', function (e
 document.getElementById('quota-donate-btn').addEventListener('click', function (event) {
     event.preventDefault;
     const inputDonationQuota = getInput('input-quota');
-    if (!inputDonationQuota || isNaN(inputDonationQuota)) {
-        return;
-    }
+    if (isNaN(inputDonationQuota)) {
+        alert('Invalid Donation Amount');
+        
+       
+   }
+   if(!inputDonationQuota){
+       return;
+   }
     const bdtQuota = getBDT('quota-bdt');
     const bdt = calculateDonation(inputDonationQuota, bdtQuota);
     if (typeof (bdt) === 'number') {
         document.getElementById('quota-bdt').innerText = bdt;
         const inputDonationQuota = getInput('input-quota');
         const div = document.createElement('div');
-        div.classList.add('border', 'rounded-xl', 'px-5', 'py-5')
+        div.classList.add('border', 'rounded-xl', 'px-5', 'py-5','mx-16')
 
         const date = Date();
 
         div.innerHTML = `
-<h4 class="text-xl font-bold">${inputDonationQuota} Taka is Donated for Famine-2024 at Feni</h4>
+<h4 class="text-lg lg:text-xl font-bold">${inputDonationQuota} Taka is Donated for Aid for Quota Movement Injured, Bangladesh</h4>
 <p class="text-black opacity-70 text-sm">${date}</p>`;
         document.getElementById('history').appendChild(div);
     }
