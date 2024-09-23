@@ -28,6 +28,7 @@ document.getElementById('noakhali-donate-btn').addEventListener('click', functio
 <h4 class="text-lg lg:text-xl  font-bold">${inputDonationNoakhali} Taka is Donated for Famine-2024 at Noakhlai, Bangladesh</h4>
 <p class="text-black opacity-70 text-sm">${date}</p>`;
         document.getElementById('history').appendChild(div);
+        my_modal_1.showModal();
 
 
     }
@@ -60,6 +61,7 @@ document.getElementById('feni-donate-btn').addEventListener('click', function (e
 <h4 class="text-lg lg:text-xl font-bold">${inputDonationFeni} Taka is Donated for Famine-2024 at Feni, Bangladesh</h4>
 <p class="text-black opacity-70 text-sm">${date}</p>`;
         document.getElementById('history').appendChild(div);
+        my_modal_1.showModal();
 
     }
 
@@ -91,6 +93,8 @@ document.getElementById('quota-donate-btn').addEventListener('click', function (
 <h4 class="text-lg lg:text-xl font-bold">${inputDonationQuota} Taka is Donated for Aid for Quota Movement Injured, Bangladesh</h4>
 <p class="text-black opacity-70 text-sm">${date}</p>`;
         document.getElementById('history').appendChild(div);
+
+        my_modal_1.showModal();
     }
 })
 
@@ -138,5 +142,11 @@ function calculateDonation(inputAmount, bdtAmount) {
 
 
     }
+
+}
+//showing modal
+function showModal(){
+const modal =document.getElementById('modal-div');
+modal.style.display='block';
 
 }

@@ -116,6 +116,26 @@
         <div id="history" class="hidden flex flex-col mx-auto gap-5 ">
 
         </div>
+
+        <!--modal-->
+        
+            <!--<button class="btn" onclick="my_modal_1.showModal()">open modal</button>-->
+<dialog id="my_modal_1" class="modal">
+  <div class="modal-box flex flex-col items-center">
+    
+    <h1 class="text-4xl font-bold my-3">Congrats!</h1>
+    <img src="images/coin.png" alt="">
+    <p class="py-4">You Have Donated for Humankind</p>
+    <h3 class="text-2xl font-semibold my-2">Successfully</h3>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">close confirmation</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+    
         
     </main>
     <script src="js/toggle.js"></script>
