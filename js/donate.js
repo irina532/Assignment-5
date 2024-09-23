@@ -5,13 +5,13 @@ document.getElementById('noakhali-donate-btn').addEventListener('click', functio
     event.preventDefault;
 
     const inputDonationNoakhali = getInput('input-noakhali');
-    if (isNaN(inputDonationNoakhali) || inputDonationNoakhali==='0' || !inputDonationNoakhali) {
-         alert('Invalid Donation Amount');
-         return;
+    if (isNaN(inputDonationNoakhali) || inputDonationNoakhali === '0' || !inputDonationNoakhali) {
+        alert('Invalid Donation Amount');
+        return;
 
-        
+
     }
-    
+
 
     const bdtNoakhali = getBDT('noakhali-bdt');
     const bdt = calculateDonation(inputDonationNoakhali, bdtNoakhali);
@@ -19,7 +19,7 @@ document.getElementById('noakhali-donate-btn').addEventListener('click', functio
         document.getElementById('noakhali-bdt').innerText = bdt;
         const inputDonationNoakhali = getInput('input-noakhali');
         const div = document.createElement('div');
-        div.classList.add('border', 'rounded-xl', 'px-5', 'py-5','mx-16')
+        div.classList.add('border', 'rounded-xl', 'px-5', 'py-5', 'mx-16')
 
         const date = Date();
 
@@ -38,13 +38,13 @@ document.getElementById('noakhali-donate-btn').addEventListener('click', functio
 document.getElementById('feni-donate-btn').addEventListener('click', function (event) {
     event.preventDefault;
     const inputDonationFeni = getInput('input-feni');
-    if (isNaN(inputDonationFeni) || inputDonationFeni==='0' || !inputDonationFeni) {
+    if (isNaN(inputDonationFeni) || inputDonationFeni === '0' || !inputDonationFeni) {
         alert('Invalid Donation Amount');
         return;
-        
-       
-   }
-   
+
+
+    }
+
     const bdtFeni = getBDT('feni-bdt');
     const bdt = calculateDonation(inputDonationFeni, bdtFeni);
     if (typeof (bdt) === 'number') {
@@ -69,22 +69,22 @@ document.getElementById('feni-donate-btn').addEventListener('click', function (e
 document.getElementById('quota-donate-btn').addEventListener('click', function (event) {
     event.preventDefault;
     const inputDonationQuota = getInput('input-quota');
-    if (isNaN(inputDonationQuota) || inputDonationQuota==='0' || !inputDonationQuota) {
+    if (isNaN(inputDonationQuota) || inputDonationQuota === '0' || !inputDonationQuota) {
         alert('Invalid Donation Amount');
         return;
-        
-       
-   }
-   if(!inputDonationQuota){
-       return;
-   }
+
+
+    }
+    if (!inputDonationQuota) {
+        return;
+    }
     const bdtQuota = getBDT('quota-bdt');
     const bdt = calculateDonation(inputDonationQuota, bdtQuota);
     if (typeof (bdt) === 'number') {
         document.getElementById('quota-bdt').innerText = bdt;
         const inputDonationQuota = getInput('input-quota');
         const div = document.createElement('div');
-        div.classList.add('border', 'rounded-xl', 'px-5', 'py-5','mx-16')
+        div.classList.add('border', 'rounded-xl', 'px-5', 'py-5', 'mx-16')
 
         const date = Date();
 
@@ -144,8 +144,8 @@ function calculateDonation(inputAmount, bdtAmount) {
 
 }
 //showing modal
-function showModal(){
-const modal =document.getElementById('modal-div');
-modal.style.display='block';
+function showModal() {
+    const modal = document.getElementById('modal-div');
+    modal.style.display = 'block';
 
 }
